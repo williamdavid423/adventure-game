@@ -80,7 +80,7 @@ namespace adventure_game
             switch (scene)
             {
                 case 0:  //start scene  
-             
+                    titleLabel.Text = "noob";
                     break;
                 case 1:
                     imageBox.BackgroundImage = Properties.Resources.greenButton;

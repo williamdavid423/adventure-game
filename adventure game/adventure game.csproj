@@ -101,5 +101,8 @@
   <ItemGroup>
     <None Include="Resources\saltyTowers.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fortnite default dance sound.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -14,19 +14,24 @@ namespace adventure_game
 {
     public partial class Form1 : Form
     {
+        Random randGen = new Random();
+        SoundPlayer dance = new SoundPlayer(Properties.Resources.danceDefault);
         int scene = 0;
         public Form1()
         {  InitializeComponent();
-            imageBox.BackgroundImage = Properties.Resources.greenButton;
-            topButtonLabel.Text = "Press M or B Button To Ready Up";
+            titleLabel.Text = "Press M or B to Ready Up";
+            topButtonLabel.Text = "";
+            bottomButtonLabel.Text = "";
             mainPictureBox.BackgroundImage = Properties.Resources.mainLobby;
             mainPictureBox2.Visible = false;
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            int chanceAmount = randGen.Next(1, 11);
             if (e.KeyCode == Keys.M)       //red button press
             {
+               
                
                 if (scene == 0) { scene = 1; }
                 
@@ -35,22 +40,36 @@ namespace adventure_game
                 else if (scene == 3) { scene = 4; }
                 else if (scene == 4) { scene = 0; }
                 else if (scene == 5) { scene = 7; }
-                else if (scene == 6) {  }
-                else if (scene == 7) { }
-                else if (scene == 8) {  }
-                else if (scene == 9) { }
-                else if (scene == 10) {  }
-                else if (scene == 11) {  }
-                else if (scene == 12) {  }
-                else if (scene == 13) {  }
-                else if (scene == 14) {  }
-                else if (scene == 15) {  }
-                else if (scene == 16) {  }
-                else if (scene == 17) {  }
-                else if (scene == 18) {  }
-                else if (scene == 19) {  }
-                else if (scene == 20) { }
-                else if (scene == 21) {  }
+                else if (scene == 6) { scene = 10; }
+                else if (scene == 7) { scene = 15; }
+                else if (scene == 8) { scene = 12; }
+                else if (scene == 9) { scene = 13; }
+                else if (scene == 10) { scene = 4; }
+                else if (scene == 11) { scene = 4; }
+                else if (scene == 12) { scene = 4; }
+                else if (scene == 13) { scene = 19; }
+                else if (scene == 14) { scene = 4; }
+                else if (scene == 15) { scene = 16; }
+                else if (scene == 16) { scene = 4; }
+                else if (scene == 17) { scene = 18; }
+                else if (scene == 18)
+                {
+                    if (chanceAmount <= 3) { scene = 19; }
+                    else
+                    {
+                        scene = 4;
+                    }
+                }
+                else if (scene == 19) { scene = 0; }
+                else if (scene == 20)
+                {
+                    if (chanceAmount <= 6) { scene = 19; }
+                    else
+                    {
+                        scene = 21;
+                    }
+                }
+                else if (scene == 21) { scene = 0; }
 
             }
             else
@@ -61,38 +80,59 @@ namespace adventure_game
 
             if (e.KeyCode == Keys.B)  //blue button press
             {
+
                 if (scene == 0) { scene = 1; }
 
                 else if (scene == 1) { scene = 2; }
                 else if (scene == 2) { scene = 3; }
                 else if (scene == 3) { scene = 4; }
-                else if (scene == 4) { }
+                else if (scene == 4) { scene = 0; }
                 else if (scene == 5) { scene = 6; }
-                else if (scene == 6) { }
-                else if (scene == 7) { }
-                else if (scene == 8) { }
-                else if (scene == 9) { }
-                else if (scene == 10) { }
-                else if (scene == 11) { }
-                else if (scene == 12) { }
-                else if (scene == 13) { }
-                else if (scene == 14) { }
-                else if (scene == 15) { }
-                else if (scene == 16) { }
-                else if (scene == 17) { }
-                else if (scene == 18) { }
-                else if (scene == 19) { }
-                else if (scene == 20) { }
-                else if (scene == 21) { }
+                else if (scene == 6) { scene = 8; }
+                else if (scene == 7) { scene = 14; }
+                else if (scene == 8) { scene = 9; }
+                else if (scene == 9) { scene = 11; }
+                else if (scene == 10) { scene = 4; }
+                else if (scene == 11) { scene = 4; }
+                else if (scene == 12) { scene = 4; }
+                else if (scene == 13) { scene = 19; }
+                else if (scene == 14) { scene = 4; }
+                else if (scene == 15) { scene = 17; }
+                else if (scene == 16) { scene = 4; }
+                else if (scene == 17) { scene = 20; }
+                else if (scene == 18)
+                {
+                    if (chanceAmount <= 3) { scene = 19; }
+                    else
+                    {
+                        scene = 4;
+                    }
+                }
+                else if (scene == 19) { scene = 0; }
+                else if (scene == 20)
+                {
+                    if (chanceAmount <= 6) { scene = 19; }
+                    else
+                    {
+                        scene = 21;
+                    }
+                }
+                else if (scene == 21) { scene = 0; }
             }
 
             switch (scene)
             {
+              
                 case 0:  //start scene  
                     imageBox.BackgroundImage = Properties.Resources.greenButton;
-                    topButtonLabel.Text = "Press M or B Button To Ready Up";
+                    titleLabel.Text = "Press M or B to Ready Up";
+                    topButtonLabel.Text = "";
+                    bottomButtonLabel.Text = "";
                     mainPictureBox.BackgroundImage = Properties.Resources.mainLobby;
+                    mainPictureBox.Visible = true;
                     mainPictureBox2.Visible = false;
+                    imageBox.Visible = false;
+                    imageBox1.Visible = false;
                     break;
                
                 case 1:
@@ -104,6 +144,8 @@ namespace adventure_game
                     topButtonLabel.Text = "Salty Towers";
                     bottomButtonLabel.Text = "Retail Row";
                     titleLabel.Text = "You are in the bus. Where are you dropping?";
+                    imageBox.Visible = true;
+                    imageBox1.Visible = true;
                     break;              
                 case 2:
                     mainPictureBox.BackgroundImage = Properties.Resources.saltyTowers;
@@ -114,7 +156,7 @@ namespace adventure_game
                     bottomButtonLabel.Text = "Rush in";
                     break;              
                 case 3:
-                    titleLabel.Text = "Turns out someone else landed their first and ends up killing you";
+                    titleLabel.Text = "Turns out someone else landed their first and ends up killing you.\nPress M or B to continue";
                     topButtonLabel.Text = "";
                     bottomButtonLabel.Text = "";
                     break;
@@ -140,32 +182,87 @@ namespace adventure_game
                     bottomButtonLabel.Text = "Get materials";
                     break;
                 case 8:
+                   
+                    titleLabel.Text = "You find the guy at close range, you manage to get him low with the tac shotgun and finish him off with the smg.";
+                    topButtonLabel.Text = "";
+                    bottomButtonLabel.Text = "";
+                    Refresh();
+                    Thread.Sleep(3000);
+                    titleLabel.Text = "You end up with a blue AR, tac shot gun, silenced smg, a med kit, and 3 mini shields.\nDo you go and hunt for other people or loot some more?";
+                    topButtonLabel.Text = "Go hunt for people";
+                    bottomButtonLabel.Text = "Loot some more";
                     break;
                 case 9:
+                    titleLabel.Text = "You look around the entire map for people but don't run into anyone until late game where there are 3 people left.\nDo you rush in the fight or let them fight it out?";
+                    topButtonLabel.Text = "Rush in";
+                    bottomButtonLabel.Text = "Let them fight";
+
                     break;
                 case 10:
+                    titleLabel.Text = "Someone else finds you getting materials and guns you down with an AR.\nPress M or B to continue";
+                    topButtonLabel.Text = "";
+                    bottomButtonLabel.Text = "";
                     break;
                 case 11:
+                    titleLabel.Text = "You manage to kill one of them but had no time to heal up after the fight\nPress M or B to continue";
+                    topButtonLabel.Text = "";
+                    bottomButtonLabel.Text = "";
                     break;
                 case 12:
+                    titleLabel.Text = "You go looting at colossal coliseum but run into two people there that pinch you from both sides.\nPress M or B to continue";
+                    topButtonLabel.Text = "";
+                    bottomButtonLabel.Text = "";
                     break;
                 case 13:
+                    titleLabel.Text = "You find yourself in a good position, the one enemy is dead and the other is weak. You build up to get a better view and gun him dead.\nPress M or B to continue";
+                    topButtonLabel.Text = "";
+                    bottomButtonLabel.Text = "";
                     break;
                 case 14:
+                    titleLabel.Text = "You find him at close range and you end up getting killed because you couldn't follow up your pump shot with the scar.\nPress M or B to continue";
+                    topButtonLabel.Text = "";
+                    bottomButtonLabel.Text = "";
                     break;
                 case 15:
+                    titleLabel.Text = "You find someone else getting materials and you gun him down quickly with the scar.";
+                    topButtonLabel.Text = "";
+                    bottomButtonLabel.Text = "";
+                    Refresh();
+                    Thread.Sleep(3000);
+                    titleLabel.Text = "Your end up with your scar, pump shotgun, smg, bandages and 2 big pot shields.\nDo you drive around looking for people or get materials?";
+                    topButtonLabel.Text = "Drive around";
+                    bottomButtonLabel.Text = "Get materials ";
                     break;
                 case 16:
+                    titleLabel.Text = "you get caught getting materials and get gunned down before you can fight back.\nPress M or B to continue";
+                    topButtonLabel.Text = "";
+                    bottomButtonLabel.Text = "";
                     break;
                 case 17:
+                    titleLabel.Text = "you find yourself a couple people, and manage to make it to late game with one person left\nDo you look around for him or build a base for high ground";
+                    topButtonLabel.Text = "Look around";
+                    bottomButtonLabel.Text = "Build a Base";
                     break;
                 case 18:
+                    titleLabel.Text = "He finds you while you are building your base, he builds up and shoots you\nPress M or B to Continue";
+                    topButtonLabel.Text = "";
+                    bottomButtonLabel.Text = "";
                     break;
                 case 19:
+                    titleLabel.Text = "congratulations you got the victory royale and default dance to show your power over the competition.\nPress M or B to go to the home screen";
+                    topButtonLabel.Text = "";
+                    bottomButtonLabel.Text = "";
+                    dance.Play();
                     break;
                 case 20:
+                    titleLabel.Text = "You manage to find him and sneak up behind him without him knowing and kill him\nPress M or B to continue";
+                    topButtonLabel.Text = "";
+                    bottomButtonLabel.Text = "";
                     break;
                 case 21:
+                    titleLabel.Text = "congratulations you got the victory royale\nPress M or B to go to the home screen";
+                    topButtonLabel.Text = "";
+                    bottomButtonLabel.Text = "";
                     break;
 
                 default:

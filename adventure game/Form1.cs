@@ -156,28 +156,37 @@ namespace adventure_game
                     bottomButtonLabel.Text = "Rush in";
                     break;              
                 case 3:
+                    mainPictureBox.Visible = true;
+                    mainPictureBox2.Visible = false;
                     titleLabel.Text = "Turns out someone else landed their first and ends up killing you.\nPress M or B to continue";
                     topButtonLabel.Text = "";
                     bottomButtonLabel.Text = "";
                     break;
                 case 4:
+                    mainPictureBox.Visible = true;
+                    mainPictureBox2.Visible = false;
+                    mainPictureBox.BackgroundImage = Properties.Resources.fortniteDeathImage;
                     titleLabel.Text = "You've died but Great Try!\nPress M or B To Go Back To the Menu";
                     topButtonLabel.Text = "";
                     bottomButtonLabel.Text = "";
                     break;
                 case 5:
-
+                    mainPictureBox.Visible = true;
+                    mainPictureBox2.Visible = false;
+                    mainPictureBox.BackgroundImage = Properties.Resources.retailRow;
                     titleLabel.Text = "You've decided to land at Retail Row. What house do you land at?";
                     topButtonLabel.Text = "Lebron's house";
                     bottomButtonLabel.Text = "Broken house";
                     break;
                 case 6:
-                    titleLabel.Text = "You find a silenced smg, a tac shotgun, and 3 mini shields. Do you go fight the other player you seen land there or go get materials?";
+                    mainPictureBox.BackgroundImage = Properties.Resources.dogHouse;
+                    titleLabel.Text = "You land at lebron's house and find a silenced smg, a tac shotgun, and 3 mini shields. Do you go fight the other player you seen land there or go get materials?";
                     topButtonLabel.Text = "Fight";
                     bottomButtonLabel.Text = "Get materials";
                     break;
                 case 7:
-                    titleLabel.Text = "You find a purple scar, green pump, and bandages. Do you go fight the other player you seen land there or go get materials?";
+                    mainPictureBox.BackgroundImage = Properties.Resources.brokenHouse;
+                    titleLabel.Text = "You land at the broken house and find a purple scar, green pump, and bandages. Do you go fight the other player you seen land there or go get materials?";
                     topButtonLabel.Text = "Fight";
                     bottomButtonLabel.Text = "Get materials";
                     break;
@@ -204,26 +213,36 @@ namespace adventure_game
                     bottomButtonLabel.Text = "";
                     break;
                 case 11:
+                    mainPictureBox.Visible = true;
+                    mainPictureBox2.Visible = false;
                     titleLabel.Text = "You manage to kill one of them but had no time to heal up after the fight\nPress M or B to continue";
                     topButtonLabel.Text = "";
                     bottomButtonLabel.Text = "";
                     break;
                 case 12:
+                    mainPictureBox.Visible = true;
+                    mainPictureBox2.Visible = false;
                     titleLabel.Text = "You go looting at colossal coliseum but run into two people there that pinch you from both sides.\nPress M or B to continue";
                     topButtonLabel.Text = "";
                     bottomButtonLabel.Text = "";
                     break;
                 case 13:
+                    mainPictureBox.Visible = true;
+                    mainPictureBox2.Visible = false;
                     titleLabel.Text = "You find yourself in a good position, the one enemy is dead and the other is weak. You build up to get a better view and gun him dead.\nPress M or B to continue";
                     topButtonLabel.Text = "";
                     bottomButtonLabel.Text = "";
                     break;
                 case 14:
+                    mainPictureBox.Visible = true;
+                    mainPictureBox2.Visible = false;
                     titleLabel.Text = "You find him at close range and you end up getting killed because you couldn't follow up your pump shot with the scar.\nPress M or B to continue";
                     topButtonLabel.Text = "";
                     bottomButtonLabel.Text = "";
                     break;
                 case 15:
+                    mainPictureBox.Visible = true;
+                    mainPictureBox2.Visible = false;
                     titleLabel.Text = "You find someone else getting materials and you gun him down quickly with the scar.";
                     topButtonLabel.Text = "";
                     bottomButtonLabel.Text = "";
@@ -234,33 +253,46 @@ namespace adventure_game
                     bottomButtonLabel.Text = "Get materials ";
                     break;
                 case 16:
+                    mainPictureBox.Visible = true;
+                    mainPictureBox2.Visible = false;
                     titleLabel.Text = "you get caught getting materials and get gunned down before you can fight back.\nPress M or B to continue";
                     topButtonLabel.Text = "";
                     bottomButtonLabel.Text = "";
                     break;
                 case 17:
+                    mainPictureBox.Visible = true;
+                    mainPictureBox2.Visible = false;
                     titleLabel.Text = "you find yourself a couple people, and manage to make it to late game with one person left\nDo you look around for him or build a base for high ground";
                     topButtonLabel.Text = "Look around";
                     bottomButtonLabel.Text = "Build a Base";
                     break;
                 case 18:
-                    titleLabel.Text = "He finds you while you are building your base, he builds up and shoots you\nPress M or B to Continue";
+                    mainPictureBox.Visible = true;
+                    mainPictureBox2.Visible = false;
+                    titleLabel.Text = "He finds you while you are building your base, he builds up and shoots you but you manage to protect yourself. Will you win this fight?\nPress M or B to find out";
                     topButtonLabel.Text = "";
                     bottomButtonLabel.Text = "";
                     break;
                 case 19:
-                    titleLabel.Text = "congratulations you got the victory royale and default dance to show your power over the competition.\nPress M or B to go to the home screen";
+                    mainPictureBox.Visible = true;
+                    mainPictureBox2.Visible = false;
+                    mainPictureBox.BackgroundImage = Properties.Resources.defaultImage;
+                    titleLabel.Text = "CONGRATULATIONS you got the VICTORY ROYALE and default dance to show your power over the competition.\nPress M or B to go to the home screen";
                     topButtonLabel.Text = "";
                     bottomButtonLabel.Text = "";
                     dance.Play();
                     break;
                 case 20:
+                    mainPictureBox.Visible = true;
+                    mainPictureBox2.Visible = false;
                     titleLabel.Text = "You manage to find him and sneak up behind him without him knowing and kill him\nPress M or B to continue";
                     topButtonLabel.Text = "";
                     bottomButtonLabel.Text = "";
                     break;
                 case 21:
-                    titleLabel.Text = "congratulations you got the victory royale\nPress M or B to go to the home screen";
+                    mainPictureBox.Visible = true;
+                    mainPictureBox2.Visible = false;
+                    titleLabel.Text = "CONGRATULATIONS you got the VICTORY ROYALE\nPress M or B to go to the home screen";
                     topButtonLabel.Text = "";
                     bottomButtonLabel.Text = "";
                     break;
@@ -272,6 +304,11 @@ namespace adventure_game
         }
 
         private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

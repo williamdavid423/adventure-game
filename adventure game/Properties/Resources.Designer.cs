@@ -61,11 +61,71 @@ namespace adventure_game.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brokenHouse {
+            get {
+                object obj = ResourceManager.GetObject("brokenHouse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream danceDefault {
             get {
                 return ResourceManager.GetStream("danceDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap defaultImage {
+            get {
+                object obj = ResourceManager.GetObject("defaultImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dogHouse {
+            get {
+                object obj = ResourceManager.GetObject("dogHouse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flyinginalone {
+            get {
+                object obj = ResourceManager.GetObject("flyinginalone", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flyingwithlotsofpeople {
+            get {
+                object obj = ResourceManager.GetObject("flyingwithlotsofpeople", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fortniteDeathImage {
+            get {
+                object obj = ResourceManager.GetObject("fortniteDeathImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -95,6 +155,16 @@ namespace adventure_game.Properties {
         internal static System.Drawing.Bitmap redButton {
             get {
                 object obj = ResourceManager.GetObject("redButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap retailRow {
+            get {
+                object obj = ResourceManager.GetObject("retailRow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -104,5 +104,26 @@
   <ItemGroup>
     <None Include="Resources\Fortnite default dance sound.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fortniteDeathImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\defaultImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flyingwithlotsofpeople.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flyinginalone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\retailRow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brokenHouse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dogHouse.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

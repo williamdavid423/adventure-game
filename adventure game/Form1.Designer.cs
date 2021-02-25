@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.topButtonLabel = new System.Windows.Forms.Label();
             this.bottomButtonLabel = new System.Windows.Forms.Label();
             this.mainPictureBox = new System.Windows.Forms.PictureBox();
@@ -47,9 +48,8 @@
             this.topButtonLabel.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.topButtonLabel.Location = new System.Drawing.Point(150, 299);
             this.topButtonLabel.Name = "topButtonLabel";
-            this.topButtonLabel.Size = new System.Drawing.Size(69, 24);
+            this.topButtonLabel.Size = new System.Drawing.Size(0, 24);
             this.topButtonLabel.TabIndex = 7;
-            this.topButtonLabel.Text = "label1";
             // 
             // bottomButtonLabel
             // 
@@ -57,9 +57,8 @@
             this.bottomButtonLabel.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bottomButtonLabel.Location = new System.Drawing.Point(150, 384);
             this.bottomButtonLabel.Name = "bottomButtonLabel";
-            this.bottomButtonLabel.Size = new System.Drawing.Size(69, 24);
+            this.bottomButtonLabel.Size = new System.Drawing.Size(0, 24);
             this.bottomButtonLabel.TabIndex = 9;
-            this.bottomButtonLabel.Text = "label1";
             // 
             // mainPictureBox
             // 
@@ -100,6 +99,7 @@
             // 
             // titleLabel
             // 
+            this.titleLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel.Location = new System.Drawing.Point(31, 13);
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(436, 81);
@@ -119,8 +119,10 @@
             this.Controls.Add(this.imageBox1);
             this.Controls.Add(this.topButtonLabel);
             this.Controls.Add(this.imageBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "   Fortnite Battle Royale";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.mainPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).EndInit();

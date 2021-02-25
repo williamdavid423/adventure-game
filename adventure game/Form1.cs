@@ -32,7 +32,7 @@ namespace adventure_game
                 
                 else if (scene == 1) { scene = 5; }
                 else if (scene == 2) { scene = 4; }
-                else if (scene == 3) { }
+                else if (scene == 3) { scene = 4; }
                 else if (scene == 4) { scene = 0; }
                 else if (scene == 5) { scene = 7; }
                 else if (scene == 6) {  }
@@ -67,7 +67,7 @@ namespace adventure_game
                 else if (scene == 2) { scene = 3; }
                 else if (scene == 3) { scene = 4; }
                 else if (scene == 4) { }
-                else if (scene == 5) { }
+                else if (scene == 5) { scene = 6; }
                 else if (scene == 6) { }
                 else if (scene == 7) { }
                 else if (scene == 8) { }
@@ -89,7 +89,10 @@ namespace adventure_game
             switch (scene)
             {
                 case 0:  //start scene  
-                  
+                    imageBox.BackgroundImage = Properties.Resources.greenButton;
+                    topButtonLabel.Text = "Press M or B Button To Ready Up";
+                    mainPictureBox.BackgroundImage = Properties.Resources.mainLobby;
+                    mainPictureBox2.Visible = false;
                     break;
                
                 case 1:

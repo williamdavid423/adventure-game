@@ -136,6 +136,7 @@ namespace adventure_game
                     break;
                
                 case 1:
+                    BackgroundImage = Properties.Resources.defaultImage;
                     imageBox.BackgroundImage = Properties.Resources.greenButton;
                     imageBox1.BackgroundImage = Properties.Resources.redButton;
                     mainPictureBox2.BackgroundImage = Properties.Resources.seasonFiveMap;
